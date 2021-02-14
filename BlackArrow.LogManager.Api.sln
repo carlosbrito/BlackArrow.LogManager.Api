@@ -3,7 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackArrow.LogManager.Api", "BlackArrow.LogManager.Api\BlackArrow.LogManager.Api.csproj", "{432D5655-23FF-446C-8E08-321E43174C25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackArrow.LogManager.Api", "BlackArrow.LogManager.Api\BlackArrow.LogManager.Api.csproj", "{432D5655-23FF-446C-8E08-321E43174C25}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackArrow.LogManager.Domain", "BlackArrow.LogManager.Domain\BlackArrow.LogManager.Domain.csproj", "{BD9EC86F-F26F-4CB4-A2B6-B1E9044E29F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackArrow.LogManager.Repository.MongoDB", "BlackArrow.LogManager.Repository\BlackArrow.LogManager.Repository.MongoDB.csproj", "{C6ED4B0D-D2AB-4239-8C13-E2395047DEBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{5B264066-D034-4480-856C-DC3E03C8FEEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{B58614F8-986A-44D4-9EE5-C8D654BB6836}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-API", "1-API", "{EA74FA12-99EA-477A-9A1B-CB1773EA02CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Application", "2-Application", "{2E628E4C-0446-455D-8582-06806880CAF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackArrow.LogManager.Application", "BlackArrow.LogManager.Application\BlackArrow.LogManager.Application.csproj", "{DB982C5F-99BC-4A02-A58F-6D4AA967209F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackArrow.LogManager.SharedKernell", "BlackArrow.LogManager.SharedKernel\BlackArrow.LogManager.SharedKernell.csproj", "{DDFFA668-DF89-4915-96BE-F1E3483CD88B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +31,32 @@ Global
 		{432D5655-23FF-446C-8E08-321E43174C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{432D5655-23FF-446C-8E08-321E43174C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{432D5655-23FF-446C-8E08-321E43174C25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD9EC86F-F26F-4CB4-A2B6-B1E9044E29F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD9EC86F-F26F-4CB4-A2B6-B1E9044E29F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD9EC86F-F26F-4CB4-A2B6-B1E9044E29F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD9EC86F-F26F-4CB4-A2B6-B1E9044E29F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6ED4B0D-D2AB-4239-8C13-E2395047DEBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6ED4B0D-D2AB-4239-8C13-E2395047DEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6ED4B0D-D2AB-4239-8C13-E2395047DEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6ED4B0D-D2AB-4239-8C13-E2395047DEBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB982C5F-99BC-4A02-A58F-6D4AA967209F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB982C5F-99BC-4A02-A58F-6D4AA967209F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB982C5F-99BC-4A02-A58F-6D4AA967209F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB982C5F-99BC-4A02-A58F-6D4AA967209F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDFFA668-DF89-4915-96BE-F1E3483CD88B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDFFA668-DF89-4915-96BE-F1E3483CD88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDFFA668-DF89-4915-96BE-F1E3483CD88B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDFFA668-DF89-4915-96BE-F1E3483CD88B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{432D5655-23FF-446C-8E08-321E43174C25} = {EA74FA12-99EA-477A-9A1B-CB1773EA02CE}
+		{BD9EC86F-F26F-4CB4-A2B6-B1E9044E29F7} = {B58614F8-986A-44D4-9EE5-C8D654BB6836}
+		{C6ED4B0D-D2AB-4239-8C13-E2395047DEBB} = {5B264066-D034-4480-856C-DC3E03C8FEEB}
+		{DB982C5F-99BC-4A02-A58F-6D4AA967209F} = {2E628E4C-0446-455D-8582-06806880CAF4}
+		{DDFFA668-DF89-4915-96BE-F1E3483CD88B} = {B58614F8-986A-44D4-9EE5-C8D654BB6836}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {467A1160-6F97-49AD-93FB-D651D897B59E}

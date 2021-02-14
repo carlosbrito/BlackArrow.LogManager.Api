@@ -13,6 +13,14 @@ namespace BlackArrow.LogManager.Api
     {
         public static void Main(string[] args)
         {
+            var host = new HostBuilder()
+            .ConfigureAppConfiguration((hostContext, builder) =>
+            {
+                if (hostContext.HostingEnvironment.IsDevelopment()) builder.AddUserSecrets<Program>();
+            })
+            .Build();
+
+
             CreateHostBuilder(args).Build().Run();
         }
 

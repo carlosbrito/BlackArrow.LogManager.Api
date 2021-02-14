@@ -1,3 +1,8 @@
+using BlackArrow.LogManager.Application.Implement.AuditLog;
+using BlackArrow.LogManager.Application.Interface.AuditLog;
+using BlackArrow.LogManager.Domain.Interfaces.Repository;
+using BlackArrow.LogManager.Repository.MongoDB;
+using BlackArrow.LogManager.SharedKernell;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +36,12 @@ namespace BlackArrow.LogManager.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BlackArrow.LogManager.Api", Version = "v1" });
             });
+
+            services.AddScoped<IAuditLogInterface, IAuditLogApp>();
+            services.AddScoped<IAuditLogRepositoryInterface, AuditLogRepository>();
+            
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +62,8 @@ namespace BlackArrow.LogManager.Api
             {
                 endpoints.MapControllers();
             });
+
+           
         }
     }
 }
