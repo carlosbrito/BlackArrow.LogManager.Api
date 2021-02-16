@@ -11,7 +11,7 @@ namespace BlackArrow.LogManager.Api.Controllers
 {
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class AuditLogController : ControllerBase
     {
 
@@ -25,6 +25,7 @@ namespace BlackArrow.LogManager.Api.Controllers
         }
 
         [HttpGet]
+        [Route("get/list")]
         public List<AuditLogRoot> Get()
         {
             var audits = _auditLogInterface.GetAuditLog();

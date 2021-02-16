@@ -39,7 +39,17 @@ namespace BlackArrow.LogManager.Api
 
             services.AddScoped<IAuditLogInterface, IAuditLogApp>();
             services.AddScoped<IAuditLogRepositoryInterface, AuditLogRepository>();
-            
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllHeaders",
+                      builder =>
+                      {
+                          builder.AllowAnyOrigin()
+                                 .AllowAnyHeader()
+                                 .AllowAnyMethod();
+                      });
+            });
 
 
         }
@@ -60,10 +70,11 @@ namespace BlackArrow.LogManager.Api
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints
+                .MapControllers();
             });
 
-           
+            app.UseCors("AllowAllHeaders");
         }
     }
 }
